@@ -29,15 +29,33 @@ const ExperienceCard = ({
           <img
             src={icon}
             alt={company_name}
-            className="w-[60%] h-[60%] object-contain"
+            className="w-[70%] h-[70%] object-contain"
           />
         </div>
       }
     >
       <div>
         <h3 className="text-white text-2xl font-bold">{title}</h3>
-        <p>{company_name}</p>
+        <p
+          className="text-secondary text-lg font-semibold"
+          style={{ margin: 0 }}
+        >
+          {company_name}
+        </p>
       </div>
+
+      <ul className="mt-5 list-disc ml-5 space-y-2">
+        {points.map((point, idx) => {
+          return (
+            <li
+              key={idx}
+              className="text-white text-xs md:text-sm pl-1 tracking-wider"
+            >
+              {point}
+            </li>
+          );
+        })}
+      </ul>
     </VerticalTimelineElement>
   );
 };
