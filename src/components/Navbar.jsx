@@ -8,6 +8,8 @@ import {
   Bars3BottomLeftIcon,
   XMarkIcon,
   MapPinIcon,
+  StarIcon,
+  SunIcon,
 } from "@heroicons/react/24/outline";
 import logo from "../assets/kk.png";
 
@@ -17,10 +19,11 @@ const MobileNav = () => {
   return (
     <Popover.Root>
       <div className="sm:hidden flex flex-1 justify-end items-center">
-        <Popover.Trigger asChild>
-          <button className="w-7 h-7 inline-flex items-center justify-center text-creme">
-            <Bars3BottomLeftIcon />
-          </button>
+        <Popover.Trigger
+          asChild
+          className="w-7 h-7 inline-flex items-center justify-center text-creme"
+        >
+          <Bars3BottomLeftIcon />
         </Popover.Trigger>
         <Popover.Anchor />
       </div>
@@ -28,10 +31,8 @@ const MobileNav = () => {
       <Popover.Portal>
         <Popover.Content className="will-change-[transform,opacity] data-[state=open]:data-[side=bottom]:animate-slideDownAndFade">
           <div className="w-screen h-[200px] -mt-11 bg-black flex flex-col items-center justify-center space-y-4 relative">
-            <Popover.Close>
-              <button className="w-7 h-7 inline-flex items-center justify-center text-creme absolute top-6 right-6">
-                <XMarkIcon />
-              </button>
+            <Popover.Close className="w-7 h-7 inline-flex items-center justify-center text-creme absolute top-6 right-6">
+              <XMarkIcon />
             </Popover.Close>
 
             {navLinks.map((link) => (
@@ -91,7 +92,7 @@ const Navbar = () => {
               window.scrollTo(0, 0);
             }}
           >
-            <img className="w-10 h-10 object-contain" src={logo} />
+            <SunIcon className="text-creme w-10 h-10" />
             <p className="text-creme font-bold cursor-pointer text-xl">
               Kalama Kiefer
             </p>

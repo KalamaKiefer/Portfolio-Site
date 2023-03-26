@@ -1,5 +1,5 @@
 import React from "react";
-import { ComputersCanvas } from "./canvas";
+import { UfoCanvas } from "./canvas";
 import Bounded from "./Bounded";
 
 const Hero = () => {
@@ -20,7 +20,7 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      <ComputersCanvas />
+      <UfoCanvas />
     </Bounded>
   );
 };

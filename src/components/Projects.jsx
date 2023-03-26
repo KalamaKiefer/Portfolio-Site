@@ -11,10 +11,7 @@ import clsx from "clsx";
 const ProjectCard = ({ index, name, description, tags, image, link }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <Tilt
-        options={{ max: 45, scale: 1, speed: 450 }}
-        className="bg-matte p-5 rounded-2xl sm:w-[360px] w-full"
-      >
+      <div className="bg-matte p-5 rounded-2xl sm:w-[360px] w-full relative">
         <div className="relative w-full h-[230px]">
           <img
             src={image}
@@ -62,7 +59,7 @@ const ProjectCard = ({ index, name, description, tags, image, link }) => {
             );
           })}
         </div>
-      </Tilt>
+      </div>
     </motion.div>
   );
 };

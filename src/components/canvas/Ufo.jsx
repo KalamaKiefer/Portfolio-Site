@@ -3,8 +3,8 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
-const Computers = ({ isMobile }) => {
-  const computer = useGLTF("./ufo/scene.gltf");
+const Ufo = ({ isMobile }) => {
+  const ufo = useGLTF("./ufo/scene.gltf");
 
   return (
     <mesh>
@@ -19,16 +19,16 @@ const Computers = ({ isMobile }) => {
         shadow-mapSize={1024}
       />
       <primitive
-        object={computer.scene}
+        object={ufo.scene}
         scale={isMobile ? 0.005 : 0.008}
-        position={isMobile ? [0, -2, 0.1] : [1.5, -1.4, 0.2]}
+        position={isMobile ? [0, -1.8, 0.1] : [1.5, -1.4, 0.2]}
         rotation={[-0.01, 1, -0]}
       />
     </mesh>
   );
 };
 
-const ComputerCanvas = () => {
+const UfoCanvas = () => {
   const [isMobile, setIsMobile] = React.useState(false);
 
   React.useEffect(() => {
@@ -50,10 +50,10 @@ const ComputerCanvas = () => {
   return (
     <Canvas
       frameloop="demand"
-      shadows
       camera={{ position: [20, 3, 5], fov: 25 }}
+      shadows
       gl={{ preserveDrawingBuffer: true }}
-      className="max-h-[700px] sm:max-h-none"
+      className="max-h-[600px] sm:max-h-none"
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
@@ -62,7 +62,7 @@ const ComputerCanvas = () => {
           minPolarAngle={Math.PI / 2}
           autoRotate
         />
-        <Computers isMobile={isMobile} />
+        <Ufo isMobile={isMobile} />
       </Suspense>
 
       <Preload all />
@@ -70,4 +70,4 @@ const ComputerCanvas = () => {
   );
 };
 
-export default ComputerCanvas;
+export default UfoCanvas;

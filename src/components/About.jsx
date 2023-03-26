@@ -61,11 +61,11 @@ const About = () => {
         forward to solving new challenges for my next company.
       </motion.p>
 
-      <div className="mt-20 flex flex-wrap gap-10">
+      {/* <div className="mt-20 flex flex-wrap gap-10">
         {services.map((service, idx) => (
           <ServiceCard key={idx} index={idx} {...service} />
         ))}
-      </div>
+      </div> */}
     </Bounded>
   );
 };

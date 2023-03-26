@@ -55,7 +55,7 @@ const Contact = () => {
                 value={form.name}
                 onChange={handleChange}
                 placeholder="First & Last Name"
-                className="py-4 px-6 text-white border-none focus:ring-0 outline-none rounded-lg font-medium w-full"
+                className="py-4 px-6 text-white border-none focus:ring-0 outline-none rounded-lg font-medium w-full bg-matte"
               />
             </label>
             <label>
@@ -65,7 +65,7 @@ const Contact = () => {
                 value={form.email}
                 onChange={handleChange}
                 placeholder="Email"
-                className="py-4 px-6 text-white border-none focus:ring-0 outline-none rounded-lg font-medium w-full"
+                className="py-4 px-6 text-white border-none focus:ring-0 outline-none rounded-lg font-medium w-full bg-matte"
               />
             </label>
             <label>
@@ -75,7 +75,7 @@ const Contact = () => {
                 value={form.message}
                 onChange={handleChange}
                 placeholder="Message"
-                className="py-4 px-6 text-white border-none focus:ring-0 outline-none rounded-lg font-medium w-full"
+                className="py-4 px-6 text-white border-none focus:ring-0 outline-none rounded-lg font-medium w-full bg-matte"
               />
             </label>
 
