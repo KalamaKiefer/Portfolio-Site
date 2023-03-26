@@ -4,11 +4,11 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF("./plane/scene.gltf");
+  const computer = useGLTF("./ufo/scene.gltf");
 
   return (
     <mesh>
-      <hemisphereLight intensity={0.15} groundColor="black" />
+      <hemisphereLight intensity={0.15} groundColor="" />
       <pointLight intensity={1} />
       <spotLight
         position={[-20, 50, 10]}
@@ -20,8 +20,8 @@ const Computers = ({ isMobile }) => {
       />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.001 : 0.002}
-        position={isMobile ? [0, -2, 1] : [1.5, -2, 2]}
+        scale={isMobile ? 0.005 : 0.008}
+        position={isMobile ? [0, -2, 0.1] : [1.5, -1.4, 0.2]}
         rotation={[-0.01, 1, -0]}
       />
     </mesh>

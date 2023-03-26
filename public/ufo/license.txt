@@ -1,0 +1,11 @@
+Model Information:
+* title:	Atlas D class starbase
+* source:	https://sketchfab.com/3d-models/atlas-d-class-starbase-372f29516aa24c15aa4abb9dd115dd98
+* author:	prasannax1 (https://sketchfab.com/prasannax1)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Atlas D class starbase" (https://sketchfab.com/3d-models/atlas-d-class-starbase-372f29516aa24c15aa4abb9dd115dd98) by prasannax1 (https://sketchfab.com/prasannax1) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
