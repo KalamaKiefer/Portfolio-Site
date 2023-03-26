@@ -36,11 +36,8 @@ const ExperienceCard = ({
       }
     >
       <div>
-        <h3 className="text-white text-2xl font-bold">{title}</h3>
-        <p
-          className="text-secondary text-lg font-semibold"
-          style={{ margin: 0 }}
-        >
+        <h3 className="text-creme text-2xl font-bold">{title}</h3>
+        <p className="text-white text-lg font-semibold" style={{ margin: 0 }}>
           {company_name}
         </p>
       </div>
@@ -64,11 +61,14 @@ const ExperienceCard = ({
 const Experience = () => {
   return (
     <Bounded xPad="default" yPad="default" className="mx-auto max-w-7xl">
+      <span className="hash-span" id={"work"}>
+        &nbsp;
+      </span>
       <motion.div variants={textVariant()}>
         <p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider">
           Experience
         </p>
-        <h2 className="text-matte font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">
+        <h2 className="text-creme font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">
           Work History
         </h2>
       </motion.div>

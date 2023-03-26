@@ -28,10 +28,13 @@ const Contact = () => {
 
   return (
     <Bounded xPad="default" yPad="default" className="mx-auto max-w-7xl">
-      <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden bg-matte">
+      <span className="hash-span" id={"contact"}>
+        &nbsp;
+      </span>
+      <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden bg-transparent ">
         <motion.div
           variants={slideIn("left", "tween", 0.2, 1)}
-          className="flex-[0.75] bg-matte p-8 rounded-2xl"
+          className="flex-[0.75] bg-transparent p-8 rounded-2xl"
         >
           <p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider">
             Reach Out

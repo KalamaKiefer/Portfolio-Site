@@ -14,20 +14,22 @@ import {
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-[#EFE9FF]">
-        <div className="bg-site-bg bg-cover bg-no-repeat bg-center">
+      <div className="relative z-0 bg-black">
+        <div className="relative">
           <Navbar />
           <Hero />
-        </div>
-        <div>
-          <About />
-          <Experience />
-          <Tech />
-          <Projects />
-          <div className="relative z-0">
-            <Contact />
+          <div>
             <StarsCanvas />
           </div>
+        </div>
+
+        <About />
+        <Experience />
+        <Tech />
+        <Projects />
+        <div className="relative z-0">
+          <Contact />
+          <StarsCanvas />
         </div>
       </div>
     </BrowserRouter>

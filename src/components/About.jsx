@@ -29,19 +29,27 @@ const ServiceCard = ({ index, title, icon }) => {
 
 const About = () => {
   return (
-    <Bounded xPad="default" yPad="default" className="mx-auto max-w-7xl">
+    <Bounded
+      xPad="default"
+      yPad="default"
+      className="mx-auto max-w-7xl"
+      id="about"
+    >
+      <span className="hash-span" id={"about"}>
+        &nbsp;
+      </span>
       <motion.div variants={textVariant()}>
         <p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider">
           About Me
         </p>
-        <h2 className="text-matte font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">
+        <h2 className="text-creme font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">
           Overview
         </h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-matte text-lg max-w-3xl leading-8"
+        className="mt-4 text-creme text-lg max-w-3xl leading-8"
       >
         Hi, my name is Kalama Kiefer and I am from Oahu, Hawaii. I am full stack
         / front-end developer experienced in Typescript, Next.js, Tailwind Css,

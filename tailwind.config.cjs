@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#050816",
+        creme: "#FFFEF2",
         secondary: "#aaa6c3",
         tertiary: "#151030",
         matte: "#28282B",
@@ -19,10 +19,7 @@ module.exports = {
       screens: {
         xs: "450px",
       },
-      backgroundImage: {
-        "hero-pattern": "url('/src/assets/herobg.png')",
-        "site-bg": "url('/src/assets/bg.png')",
-      },
+      backgroundImage: {},
     },
     keyframes: {
       slideUpAndFade: {

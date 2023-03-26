@@ -12,11 +12,13 @@ import {
 import logo from "../assets/kk.png";
 
 const MobileNav = () => {
+  const [active, setActive] = React.useState("");
+
   return (
     <Popover.Root>
       <div className="sm:hidden flex flex-1 justify-end items-center">
         <Popover.Trigger asChild>
-          <button className="w-7 h-7 inline-flex items-center justify-center text-matte">
+          <button className="w-7 h-7 inline-flex items-center justify-center text-creme">
             <Bars3BottomLeftIcon />
           </button>
         </Popover.Trigger>
@@ -25,9 +27,9 @@ const MobileNav = () => {
 
       <Popover.Portal>
         <Popover.Content className="will-change-[transform,opacity] data-[state=open]:data-[side=bottom]:animate-slideDownAndFade">
-          <div className="w-screen h-[200px] -mt-11 bg-gradient-to-b from-[#E5FFFF] to-[#C2D0FF] flex flex-col items-center justify-center space-y-4 relative">
+          <div className="w-screen h-[200px] -mt-11 bg-black flex flex-col items-center justify-center space-y-4 relative">
             <Popover.Close>
-              <button className="w-7 h-7 inline-flex items-center justify-center text-matte absolute top-6 right-6">
+              <button className="w-7 h-7 inline-flex items-center justify-center text-creme absolute top-6 right-6">
                 <XMarkIcon />
               </button>
             </Popover.Close>
@@ -35,8 +37,9 @@ const MobileNav = () => {
             {navLinks.map((link) => (
               <Popover.Close key={link.id}>
                 <a
-                  href={clsx("#", link.id)}
-                  className="text-matte text-lg font-medium cursor-pointer"
+                  href={`#${link.id}`}
+                  className="text-creme text-lg font-medium cursor-pointer"
+                  onClick={() => setActive(link.title)}
                 >
                   {link.title}
                 </a>
@@ -53,11 +56,30 @@ const MobileNav = () => {
 
 const Navbar = () => {
   const [active, setActive] = React.useState("");
+  const [scrolled, setScrolled] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      if (scrollTop > 100) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <Bounded
       xPad="default"
-      className="w-full flex items-center py-5 fixed top-0 z-20 bg-gradient-to-r from-[#E5FFFF] to-[#C2D0FF]"
+      className={clsx(
+        "w-full flex items-center py-5 fixed top-0 z-20",
+        scrolled ? "bg-black" : "bg-transparent"
+      )}
     >
       <nav className="contents">
         <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
@@ -70,7 +92,7 @@ const Navbar = () => {
             }}
           >
             <img className="w-10 h-10 object-contain" src={logo} />
-            <p className="text-matte font-bold cursor-pointer text-xl">
+            <p className="text-creme font-bold cursor-pointer text-xl">
               Kalama Kiefer
             </p>
           </Link>
@@ -81,12 +103,12 @@ const Navbar = () => {
                 className={clsx(
                   active === link.title
                     ? "animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent"
-                    : "text-matte",
+                    : "text-creme",
                   "hover:animate-text hover:bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 hover:bg-clip-text hover:text-transparent text-xl font-medium cursor-pointer duration-200 ease-in-out transition"
                 )}
                 onClick={() => setActive(link.title)}
               >
-                <a href={clsx("#", link.id)}>{link.title}</a>
+                <a href={`#${link.id}`}>{link.title}</a>
               </li>
             ))}
           </ul>
