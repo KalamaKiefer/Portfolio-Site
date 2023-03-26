@@ -1,0 +1,11 @@
+Model Information:
+* title:	Sovereign styled Nova class
+* source:	https://sketchfab.com/3d-models/sovereign-styled-nova-class-b8a48965edd142d8ad1df3c53dd78d5a
+* author:	WideFoot (https://sketchfab.com/WideFoot)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Sovereign styled Nova class" (https://sketchfab.com/3d-models/sovereign-styled-nova-class-b8a48965edd142d8ad1df3c53dd78d5a) by WideFoot (https://sketchfab.com/WideFoot) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

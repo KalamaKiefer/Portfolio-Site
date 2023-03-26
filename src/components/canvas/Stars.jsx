@@ -1,9 +1,38 @@
-import React from 'react'
+import React from "react";
+import { Canvas } from "@react-three/fiber";
+import { Points, PointMaterial, Preload } from "@react-three/drei";
+import * as random from "maath/random/dist/maath-random.esm";
 
-const Stars = () => {
+const Stars = (props) => {
+  const sphere = random.inSphere(new Float32Array(5000), { radius: 1.2 });
+
   return (
-    <div>Stars</div>
-  )
-}
+    <group rotation={[0, 0, Math.PI]}>
+      <Points positions={sphere} stride={3} frustumCulled {...props}>
+        <PointMaterial
+          transparent
+          color="#f272c8"
+          size={0.002}
+          sizeAttenuation={true}
+          depthWrite={false}
+        />
+      </Points>
+    </group>
+  );
+};
 
-export default Stars
+const StarsCanvas = () => {
+  return (
+    <div className="w-full h-auto absolute inset-0 z-[-1]">
+      <Canvas camera={{ position: [0, 0, 1] }}>
+        <React.Suspense fallback={null}>
+          <Stars />
+        </React.Suspense>
+
+        <Preload />
+      </Canvas>
+    </div>
+  );
+};
+
+export default Stars;

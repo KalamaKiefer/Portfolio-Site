@@ -1,18 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { navLinks } from "../constants";
-import logo from "../assets/logo.png";
 import Bounded from "./Bounded";
 import clsx from "clsx";
 import * as Popover from "@radix-ui/react-popover";
-import { Bars3BottomLeftIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import {
+  Bars3BottomLeftIcon,
+  XMarkIcon,
+  MapPinIcon,
+} from "@heroicons/react/24/outline";
+import logo from "../assets/kk.png";
 
 const MobileNav = () => {
   return (
     <Popover.Root>
       <div className="sm:hidden flex flex-1 justify-end items-center">
         <Popover.Trigger asChild>
-          <button className="w-7 h-7 inline-flex items-center justify-center text-white">
+          <button className="w-7 h-7 inline-flex items-center justify-center text-matte">
             <Bars3BottomLeftIcon />
           </button>
         </Popover.Trigger>
@@ -21,9 +25,9 @@ const MobileNav = () => {
 
       <Popover.Portal>
         <Popover.Content className="will-change-[transform,opacity] data-[state=open]:data-[side=bottom]:animate-slideDownAndFade">
-          <div className="w-screen h-[200px] -mt-11 bg-primary flex flex-col items-center justify-center space-y-4 relative">
+          <div className="w-screen h-[200px] -mt-11 bg-gradient-to-b from-[#E5FFFF] to-[#C2D0FF] flex flex-col items-center justify-center space-y-4 relative">
             <Popover.Close>
-              <button className="w-7 h-7 inline-flex items-center justify-center text-white absolute top-6 right-6">
+              <button className="w-7 h-7 inline-flex items-center justify-center text-matte absolute top-6 right-6">
                 <XMarkIcon />
               </button>
             </Popover.Close>
@@ -32,7 +36,7 @@ const MobileNav = () => {
               <Popover.Close key={link.id}>
                 <a
                   href={clsx("#", link.id)}
-                  className="text-secondary text-lg font-medium cursor-pointer"
+                  className="text-matte text-lg font-medium cursor-pointer"
                 >
                   {link.title}
                 </a>
@@ -53,7 +57,7 @@ const Navbar = () => {
   return (
     <Bounded
       xPad="default"
-      className="w-full flex items-center py-5 fixed top-0 z-20 bg-primary"
+      className="w-full flex items-center py-5 fixed top-0 z-20 bg-gradient-to-r from-[#E5FFFF] to-[#C2D0FF]"
     >
       <nav className="contents">
         <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
@@ -65,12 +69,8 @@ const Navbar = () => {
               window.scrollTo(0, 0);
             }}
           >
-            <img
-              scr={logo}
-              alt="Kalama Kiefer"
-              className="w-9 h-9 object-contain"
-            />
-            <p className="text-white font-bold cursor-pointer text-lg">
+            <img className="w-10 h-10 object-contain" src={logo} />
+            <p className="text-matte font-bold cursor-pointer text-xl">
               Kalama Kiefer
             </p>
           </Link>
@@ -79,8 +79,10 @@ const Navbar = () => {
               <li
                 key={link.id}
                 className={clsx(
-                  active === link.title ? "text-white" : "text-secondary",
-                  "hover:text-white text-lg font-medium cursor-pointer"
+                  active === link.title
+                    ? "animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent"
+                    : "text-matte",
+                  "hover:animate-text hover:bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 hover:bg-clip-text hover:text-transparent text-xl font-medium cursor-pointer duration-200 ease-in-out transition"
                 )}
                 onClick={() => setActive(link.title)}
               >

@@ -8,7 +8,9 @@ const Loader = () => {
     <Html center>
       <span className="canvas-load"></span>
       <div className="mt-20">
-        <p className="text-lg font-semibold">{progress.toFixed(2)}%</p>
+        <p className="text-lg font-semibold text-matte">
+          {progress.toFixed(2)}%
+        </p>
         <progress
           max="100"
           value={progress.toFixed(2)}
