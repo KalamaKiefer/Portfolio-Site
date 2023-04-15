@@ -20,6 +20,14 @@ module.exports = {
         xs: "450px",
       },
       backgroundImage: {},
+      animation: {
+        slideUpAndFade: "slideUpAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)",
+        slideRightAndFade:
+          "slideRightAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)",
+        slideDownAndFade:
+          "slideDownAndFade 500ms cubic-bezier(0.16, 1, 0.3, 1)",
+        text: "text 5s ease infinite",
+      },
     },
     keyframes: {
       slideUpAndFade: {
@@ -48,13 +56,6 @@ module.exports = {
           "background-position": "right center",
         },
       },
-    },
-    animation: {
-      slideUpAndFade: "slideUpAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)",
-      slideRightAndFade:
-        "slideRightAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)",
-      slideDownAndFade: "slideDownAndFade 500ms cubic-bezier(0.16, 1, 0.3, 1)",
-      text: "text 5s ease infinite",
     },
   },
   plugins: [],

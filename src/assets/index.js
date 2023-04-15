@@ -1,49 +1,32 @@
-import backend from "./backend.png";
-import creator from "./creator.png";
-import mobile from "./mobile.png";
-import web from "./web.png";
 import github from "./github.png";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
-import figma from "./tech/figma.png";
 import git from "./tech/git.png";
 import html from "./tech/html.png";
 import javascript from "./tech/javascript.png";
-import mongodb from "./tech/mongodb.png";
+import sanity from "./tech/sanity.png";
 import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
-import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
-
-import meta from "./company-logos/meta.png";
-import shopify from "./company-logos/shopify.png";
-import starbucks from "./company-logos/starbucks.png";
-import tesla from "./company-logos/tesla.png";
+import sketch from "./tech/sketch.png";
+import nextjs from "./tech/nextjs.png";
 
 export {
-  backend,
-  creator,
-  mobile,
-  web,
   github,
   css,
   docker,
-  figma,
   git,
   html,
+  sanity,
   javascript,
-  mongodb,
   nodejs,
   reactjs,
-  redux,
   tailwind,
   typescript,
+  sketch,
   threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
+  nextjs,
 };

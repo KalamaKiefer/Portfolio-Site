@@ -7,11 +7,10 @@ import * as Popover from "@radix-ui/react-popover";
 import {
   Bars3BottomLeftIcon,
   XMarkIcon,
-  MapPinIcon,
-  StarIcon,
+  DocumentTextIcon,
   SunIcon,
 } from "@heroicons/react/24/outline";
-import logo from "../assets/kk.png";
+import github from "../assets/github.png";
 
 const MobileNav = () => {
   const [active, setActive] = React.useState("");
@@ -34,6 +33,24 @@ const MobileNav = () => {
             <Popover.Close className="w-7 h-7 inline-flex items-center justify-center text-creme absolute top-6 right-6">
               <XMarkIcon />
             </Popover.Close>
+
+            <a
+              href="https://github.com/KalamaKiefer"
+              target="_blank"
+              className="absolute top-12 right-6 lg:hidden"
+            >
+              <img
+                src={github}
+                className="w-7 opacity-50 hover:opacity-100 transition-opacity ease-in-out duration-200"
+              />
+            </a>
+            <a
+              href="src/assets/KalamaKieferResume.pdf"
+              download
+              className="absolute top-[94px] right-6 lg:hidden"
+            >
+              <DocumentTextIcon className="w-7 opacity-50 hover:opacity-100 transition-opacity ease-in-out duration-200" />
+            </a>
 
             {navLinks.map((link) => (
               <Popover.Close key={link.id}>
@@ -97,7 +114,7 @@ const Navbar = () => {
               Kalama Kiefer
             </p>
           </Link>
-          <ul className="list-none hidden sm:flex flex-row gap-10">
+          <ul className="list-none hidden sm:flex flex-row gap-10 items-center">
             {navLinks.map((link) => (
               <li
                 key={link.id}
@@ -112,6 +129,23 @@ const Navbar = () => {
                 <a href={`#${link.id}`}>{link.title}</a>
               </li>
             ))}
+            <a
+              href="https://github.com/KalamaKiefer"
+              target="_blank"
+              className="hidden lg:block"
+            >
+              <img
+                src={github}
+                className="w-10 opacity-50 hover:opacity-100 transition-opacity ease-in-out duration-200"
+              />
+            </a>
+            <a
+              href="src/assets/KalamaKieferResume.pdf"
+              download
+              className="hidden lg:block lg:-ml-2"
+            >
+              <DocumentTextIcon className="w-9 opacity-50 hover:opacity-100 transition-opacity ease-in-out duration-200" />
+            </a>
           </ul>
 
           <MobileNav />

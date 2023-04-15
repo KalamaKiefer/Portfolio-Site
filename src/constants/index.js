@@ -1,27 +1,22 @@
 import {
-  mobile,
-  backend,
-  web,
   javascript,
   typescript,
   html,
   css,
   reactjs,
-  redux,
   tailwind,
   nodejs,
-  mongodb,
+  sanity,
   git,
-  figma,
-  docker,
-  starbucks,
+  sketch,
   threejs,
+  nextjs,
 } from "../assets";
 import wtw from "../assets/company-logos/wtw-logo.png";
 import te from "../assets/company-logos/transform-enterprise.png";
-import nest from "../assets/nestHome.png";
 import budget from "../assets/budget.jpeg";
-import clone from "../assets/clone.png";
+import thoughts from "../assets/thoughts.png";
+import r2c from "../assets/rush2crush.png";
 
 export const navLinks = [
   {
@@ -35,21 +30,6 @@ export const navLinks = [
   {
     id: "contact",
     title: "Contact",
-  },
-];
-
-const services = [
-  {
-    title: "Web Developer",
-    icon: web,
-  },
-  {
-    title: "React Native Developer",
-    icon: mobile,
-  },
-  {
-    title: "Backend Developer",
-    icon: backend,
   },
 ];
 
@@ -75,8 +55,8 @@ const technologies = [
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
+    name: "Next JS",
+    icon: nextjs,
   },
   {
     name: "Tailwind CSS",
@@ -87,8 +67,8 @@ const technologies = [
     icon: nodejs,
   },
   {
-    name: "MongoDB",
-    icon: mongodb,
+    name: "Sanity.io",
+    icon: sanity,
   },
   {
     name: "Three JS",
@@ -100,7 +80,7 @@ const technologies = [
   },
   {
     name: "sketch",
-    icon: figma,
+    icon: sketch,
   },
 ];
 
@@ -119,7 +99,7 @@ const experiences = [
     ],
   },
   {
-    title: "Jr Software Engineer",
+    title: "Jr Web Developer",
     company_name: "Wall to Wall Studios.",
     icon: wtw,
     iconBg: "#fff",
@@ -135,71 +115,29 @@ const experiences = [
 
 const projects = [
   {
-    name: "Nest Social Media",
+    name: "Thoughts Blog App",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: nest,
-    liveLink: "",
-    source_code_link: "https://github.com/",
+      "Blog site made with React, Typescript, Next Js, Tailwind CSS, and Sanity.io for data storage.Utilized Next Js server side rendering for fast data fetching of posts. Utilized Sanity V3 that allows us to embed the admin dashboard directly into the web app for easy access through Next Js routing...",
+
+    image: thoughts,
+    liveLink: "https://thoughts-sanityx-next.vercel.app/",
+    source_code_link: "https://github.com/KalamaKiefer/Thoughts-SanityxNext",
   },
   {
     name: "Budget App",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
+      "Created a budgeting web app that allows users to add budget limits, expenses, and track totals. Used React context to pass props to children such as the budgets and expenses.Created a custom hook to utilize local storage to store budgets and expenses array and useEffect hook to update values whenever changed...",
     image: budget,
-    liveLink: "",
-    source_code_link: "https://github.com/",
+    liveLink: "https://budget-that-app.vercel.app/",
+    source_code_link: "https://github.com/KalamaKiefer/BudgetApp",
   },
   {
-    name: "What's App Clone",
+    name: "Rush to Crush Cancer Site",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: clone,
-    liveLink: "",
-    source_code_link: "https://github.com/",
+      "Worked on UPMC site while at Wall to Wall which drew in thousands of dollars in donations for their bike ride to cure cancer. Created the site using React, Typescript, Next Js, CSS modules, Graphql, and Prismic.io for data storage as well as complete customizability of the site with a multitude of custom code blocks that can be added...",
+    image: r2c,
+    liveLink: "https://www.rushtocrushcancer.org/",
   },
 ];
 
-export { services, technologies, experiences, projects };
+export { technologies, experiences, projects };
