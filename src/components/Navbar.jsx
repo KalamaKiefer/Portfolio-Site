@@ -11,6 +11,7 @@ import {
   SunIcon,
 } from "@heroicons/react/24/outline";
 import github from "../assets/github.png";
+import pdf from "../assets/KalamaKieferResume.pdf";
 
 const MobileNav = () => {
   const [active, setActive] = React.useState("");
@@ -45,7 +46,7 @@ const MobileNav = () => {
               />
             </a>
             <a
-              href="src/assets/KalamaKieferResume.pdf"
+              href={pdf}
               download
               className="absolute top-[94px] right-6 lg:hidden"
             >
@@ -139,11 +140,7 @@ const Navbar = () => {
                 className="w-10 opacity-50 hover:opacity-100 transition-opacity ease-in-out duration-200"
               />
             </a>
-            <a
-              href="https://kalama-kiefer.netlify.app/src/assets/KalamaKieferResume.pdf"
-              download
-              className="hidden lg:block lg:-ml-2"
-            >
+            <a href={pdf} download className="hidden lg:block lg:-ml-2">
               <DocumentTextIcon className="w-9 opacity-50 hover:opacity-100 transition-opacity ease-in-out duration-200" />
             </a>
           </ul>
