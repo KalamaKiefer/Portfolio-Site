@@ -13,12 +13,14 @@ import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 import sketch from "./tech/sketch.png";
 import nextjs from "./tech/nextjs.png";
+import pdf from "./KalamaKieferResume.pdf";
 
 export {
   github,
   css,
   docker,
   git,
+  pdf,
   html,
   sanity,
   javascript,
