@@ -31,7 +31,7 @@ const MobileNav = () => {
       <Popover.Portal>
         <Popover.Content className="will-change-[transform,opacity] data-[state=open]:data-[side=bottom]:animate-slideDownAndFade">
           <div className="w-screen h-[200px] -mt-11 bg-black flex flex-col items-center justify-center space-y-4 relative">
-            <Popover.Close className="w-7 h-7 inline-flex items-center justify-center text-creme absolute top-6 right-6 z-20">
+            <Popover.Close className="w-7 h-7  items-center justify-center text-creme absolute top-6 right-6 z-20">
               <XMarkIcon />
             </Popover.Close>
 
