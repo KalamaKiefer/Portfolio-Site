@@ -11,7 +11,7 @@ import {
   SunIcon,
 } from "@heroicons/react/24/outline";
 import github from "../assets/github.png";
-import pdf from "../assets/KalamaKieferResume.pdf";
+import pdf from "../assets/KalamaKResume.pdf";
 
 const MobileNav = () => {
   const [active, setActive] = React.useState("");

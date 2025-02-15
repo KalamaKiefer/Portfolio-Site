@@ -5,7 +5,6 @@ import { staggerContainer } from "../utils/motion";
 const Bounded = ({ children, xPad, yPad, className }) => {
   const paddingX = "sm:px-16 px-6";
   const paddingY = "sm:py-16 py-6";
-  const padding = "sm:px-16 px-6 sm:py-16 py-10";
 
   return (
     <motion.section

@@ -14,23 +14,23 @@ import threejs from "./tech/threejs.svg";
 import sketch from "./tech/sketch.png";
 import nextjs from "./tech/nextjs.png";
 import sentient from "./sentient.png";
-import pdf from "./KalamaKieferResume.pdf";
+import pdf from "./KalamaKResume.pdf";
 
 export {
-    github,
-    css,
-    docker,
-    git,
-    pdf,
-    html,
-    sanity,
-    javascript,
-    nodejs,
-    reactjs,
-    tailwind,
-    typescript,
-    sketch,
-    threejs,
-    nextjs,
-    sentient,
+  github,
+  css,
+  docker,
+  git,
+  pdf,
+  html,
+  sanity,
+  javascript,
+  nodejs,
+  reactjs,
+  tailwind,
+  typescript,
+  sketch,
+  threejs,
+  nextjs,
+  sentient,
 };
