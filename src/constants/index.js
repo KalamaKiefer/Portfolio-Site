@@ -114,11 +114,11 @@ const experiences = [
     ],
   },
   {
-    title: "Jr Software Developer",
+    title: "Software Developer",
     company_name: "Everlight Solar",
     icon: everlight,
     iconBg: "#fff",
-    date: "July 2024 - Present",
+    date: "July 2024 - April 2026",
     points: [
       "Refactored and modernized the web and Android solar application, transitioning from JavaScript to TypeScript, optimizing component architecture, and refactoring traditional CSS to Styled Components for better maintainability and performance.",
       "Implemented a comprehensive testing framework, ensuring robust and reliable features while driving team-wide efforts to modernize the tech stack with React and TypeScript.",
